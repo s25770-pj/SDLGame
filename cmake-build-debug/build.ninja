@@ -63,6 +63,13 @@ build CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles\GameProject.dir
   OBJECT_FILE_DIR = CMakeFiles\GameProject.dir\src\engine
 
+build CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj: CXX_COMPILER__GameProject_unscanned_Debug C$:/Users/Komputer/CLionProjects/GameProject/src/game/GameObject.cpp || cmake_object_order_depends_target_GameProject
+  DEP_FILE = CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/include/SDL2
+  OBJECT_DIR = CMakeFiles\GameProject.dir
+  OBJECT_FILE_DIR = CMakeFiles\GameProject.dir\src\game
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target GameProject
@@ -71,7 +78,7 @@ build CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj: CXX_COMPILER_
 #############################################
 # Link the executable GameProject.exe
 
-build GameProject.exe: CXX_EXECUTABLE_LINKER__GameProject_Debug CMakeFiles/GameProject.dir/main.cpp.obj CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj | C$:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/lib/libSDL2main.a C$:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/lib/libSDL2.dll.a
+build GameProject.exe: CXX_EXECUTABLE_LINKER__GameProject_Debug CMakeFiles/GameProject.dir/main.cpp.obj CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj | C$:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/lib/libSDL2main.a C$:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/lib/libSDL2.dll.a
   FLAGS = -g
   LINK_LIBRARIES = -lmingw32  -mwindows  C:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/lib/libSDL2main.a  C:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32/lib/libSDL2.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\GameProject.dir

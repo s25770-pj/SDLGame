@@ -12,6 +12,8 @@ include_directories(${SDL2_INCLUDE_DIR})
 add_executable(GameProject main.cpp
         src/engine/PhysicsEngine.h
         src/engine/PhysicsEngine.h
-        src/engine/PhysicsEngine.cpp)
+        src/engine/PhysicsEngine.cpp
+        src/game/GameObject.h
+        src/game/GameObject.cpp)
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY})
