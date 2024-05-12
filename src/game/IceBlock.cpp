@@ -12,7 +12,7 @@ int IceBlock::getSize() const {
     return b_Size;
 }
 
-void IceBlock::draw() {
+void IceBlock::draw(SDL_Renderer* renderer) {
     //debug - do wywalenia potem
     std::cout << "Rysowanie bloku lodu o rozmiarze " << b_Size << " na pozycji (" << getPositionX() << ", " << getPositionY() << ")" << std::endl;
 }

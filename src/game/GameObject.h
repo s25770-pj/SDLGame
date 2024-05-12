@@ -1,5 +1,7 @@
 #ifndef GAME_OBJECT_H
 
+#include <SDL.h>
+
 class GameObject {
 private:
     float m_PositionX;
@@ -13,7 +15,7 @@ public:
     [[nodiscard]] float getPositionY() const;
     void move(float offsetX, float offsetY);
     void update();
-    virtual void draw();
+    virtual void draw(SDL_Renderer* renderer);
 };
 
 #endif

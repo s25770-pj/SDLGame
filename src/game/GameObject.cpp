@@ -26,7 +26,7 @@ void GameObject::move(float offsetX, float offsetY) {
 void GameObject::update() {
 }
 
-void GameObject::draw() {
+void GameObject::draw(SDL_Renderer* renderer) {
     // debug - do wywalenia potem
     std::cout << "Rysowanie obiektu na pozycji (" << m_PositionX << ", " << m_PositionY << ")" << std::endl;
 }
