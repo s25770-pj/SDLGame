@@ -9,9 +9,11 @@ public:
     GameObject(float x, float y);
 
     void setPosition(float x, float y);
+    [[nodiscard]] float getPositionX() const;
+    [[nodiscard]] float getPositionY() const;
     void move(float offsetX, float offsetY);
     void update();
-    void draw();
+    virtual void draw();
 };
 
 #endif
