@@ -1,9 +1,6 @@
 #include "GameObject.h"
-// tylko do wizualizacji czy sie odbrze tworza na poprawnych kordynatrach, potem do wywalenia.
 
-#include <iostream>
-
-GameObject::GameObject(float x, float y) : m_PositionX(x), m_PositionY(y) {}
+GameObject::GameObject(float x, float y) : m_PositionX(x), m_PositionY(y), m_VelocityY(0.0f), m_Gravity(0.0f) {}
 
 void GameObject::setPosition(float x, float y) {
     m_PositionX = x;
@@ -18,15 +15,25 @@ float GameObject::getPositionY() const {
     return m_PositionY;
 }
 
+void GameObject::setPositionY(float positionY) {
+    m_PositionY = positionY;
+}
+
+void GameObject::setVelocityY(float VelocityY) {
+    m_VelocityY = VelocityY;
+}
+
 void GameObject::move(float offsetX, float offsetY) {
     m_PositionX += offsetX;
     m_PositionY += offsetY;
 }
 
-void GameObject::update() {
+void GameObject::draw(SDL_Renderer* renderer) {
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    SDL_Rect rect = { static_cast<int>(m_PositionX), static_cast<int>(m_PositionY)};
+    SDL_RenderFillRect(renderer, &rect);
 }
 
-void GameObject::draw(SDL_Renderer* renderer) {
-    // debug - do wywalenia potem
-    std::cout << "Rysowanie obiektu na pozycji (" << m_PositionX << ", " << m_PositionY << ")" << std::endl;
+void GameObject::setGravity(float gravity) {
+    m_Gravity = gravity;
 }

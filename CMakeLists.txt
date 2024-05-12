@@ -9,13 +9,15 @@ set(SDL2_PATH "C:/Users/Komputer/Desktop/SDL2-2.30.3/x86_64-w64-mingw32")
 find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIR})
 
-add_executable(GameProject main.cpp
+add_executable(${PROJECT_NAME} main.cpp
         src/engine/PhysicsEngine.h
         src/engine/PhysicsEngine.cpp
         src/game/GameObject.h
         src/game/GameObject.cpp
         src/game/IceBlock.h
         src/game/IceBlock.cpp
+        src/game/Player.h
+        src/game/Player.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARY})

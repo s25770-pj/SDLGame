@@ -1,19 +1,21 @@
-#ifndef ICE_BLOCK_H
-#define ICE_BLOCK_H
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include "GameObject.h"
+#include "IceBlock.h"
 #include <SDL.h>
 
-class IceBlock : public GameObject {
+class Player : public GameObject {
 private:
     int b_Size;
 
 public:
-    IceBlock(float x, float y, int size);
+    Player(float x, float y, int size);
 
     void setSize(int size);
     [[nodiscard]] int getSize() const;
     void draw(SDL_Renderer* renderer) override;
+    bool checkCollision(const IceBlock& block);
 };
 
 #endif
