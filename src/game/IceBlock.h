@@ -9,6 +9,7 @@ private:
 
 public:
     IceBlock(float x, float y, int size);
+
     void setSize(int size);
     [[nodiscard]] int getSize() const;
     void draw(SDL_Renderer* renderer) override;

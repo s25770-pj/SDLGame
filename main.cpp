@@ -30,7 +30,14 @@ int main(int argc, char* argv []) {
 
     // init obiektu gry
     std::vector<std::unique_ptr<GameObject>> gameObjects;
-    gameObjects.push_back(std::make_unique<IceBlock>(100.0f, 100.0f, 50));
+    gameObjects.push_back(std::make_unique<IceBlock>(100.0f, 100.0f, 150));
+    gameObjects.push_back(std::make_unique<IceBlock>(200.0f, 200.0f, 150));
+    gameObjects.push_back(std::make_unique<IceBlock>(300.0f, 300.0f, 150));
+    gameObjects.push_back(std::make_unique<IceBlock>(400.0f, 400.0f, 150));
+    gameObjects.push_back(std::make_unique<IceBlock>(400.0f, 500.0f, 150));
+    gameObjects.push_back(std::make_unique<IceBlock>(500.0f, 250.0f, 150));
+    gameObjects.push_back(std::make_unique<IceBlock>(0.0f, 580.0f, 800));
+
 
     // główna pętla gry
     bool isRunning = true;
@@ -42,7 +49,7 @@ int main(int argc, char* argv []) {
             }
         }
         // czyszczenie ekranu
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_SetRenderDrawColor(renderer, 128, 128, 128, 255);
         SDL_RenderClear(renderer);
 
         // rysowanie obiektów
