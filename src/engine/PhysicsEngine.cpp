@@ -5,3 +5,7 @@ void PhysicsEngine::update(float &position, float &velocity, float acceleration,
     velocity += (acceleration + gravity) * deltaTime;
     position += velocity * deltaTime;
 }
+
+void PhysicsEngine::jump(float &velocity, float jumpVelocity) {
+    velocity = -jumpVelocity;
+}

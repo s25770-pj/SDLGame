@@ -1,3 +1,4 @@
+#include <iostream>
 #include "Player.h"
 
 Player::Player(float x, float y, int size) : GameObject(x, y), b_Size(size) {}
@@ -8,6 +9,10 @@ void Player::setSize(int size) {
 
 int Player::getSize() const {
     return b_Size;
+}
+
+int Player::getHeight() const {
+    return b_Size+5;
 }
 
 void Player::draw(SDL_Renderer* renderer) {
@@ -26,23 +31,41 @@ void Player::draw(SDL_Renderer* renderer) {
     SDL_RenderFillRect(renderer, &rect);
 }
 
+void Player::jump() {
+    if (!m_IsJumping) {
+        m_IsJumping = true;
+        setVelocityY(-m_JumpVelocity);
+    }
+}
+
 void GameObject::update(float deltaTime) {
     physics.update(m_PositionY, m_VelocityY, 0.0f, m_Gravity, deltaTime);
 }
 
 bool Player::checkCollision(const IceBlock& block) {
     SDL_Rect playerRect = {
-            static_cast<int>(getPositionX()),
-            static_cast<int>(getPositionY()),
+            (int)getPositionX(),
+            (int)getPositionY(),
             b_Size,
             b_Size + 5
     };
+
     SDL_Rect blockRect = {
-            static_cast<int>(block.getPositionX()),
-            static_cast<int>(block.getPositionY()),
+            (int)block.getPositionX(),
+            (int)block.getPositionY(),
             block.getSize(),
             block.getSize() + 5
     };
 
-    return SDL_HasIntersection(&playerRect, &blockRect) == SDL_TRUE;
+    std::cout << blockRect.x << "|" << blockRect.y << "|" << blockRect.w << "|" << blockRect.h << std::endl;
+    std::cout << playerRect.x << "|" << playerRect.y << "|" << playerRect.w << "|" << playerRect.h << std::endl;
+
+    if (playerRect.x + playerRect.w > blockRect.x &&
+        playerRect.x < blockRect.x + blockRect.w &&
+        playerRect.y + playerRect.h >= blockRect.y - 5 &&
+        playerRect.y + playerRect.h <= blockRect.y + 5) {
+        return true;
+    } else {
+        return false;
+    }
 }
