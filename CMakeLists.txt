@@ -12,8 +12,7 @@ add_executable(GameProject main.cpp
         src/engine/PhysicsEngine.cpp
         src/game/GameObject.h
         src/game/GameObject.cpp
-        src/game/IceBlock.h
-        src/game/IceBlock.cpp
+        src/game/TireObject.h
         src/game/Player.cpp
 )
 

@@ -11,7 +11,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Komputer/CLionProjects/SDLGame/main.cpp" "CMakeFiles/GameProject.dir/main.cpp.obj" "msvc" "CMakeFiles/GameProject.dir/main.cpp.obj.d"
   "C:/Users/Komputer/CLionProjects/SDLGame/src/engine/PhysicsEngine.cpp" "CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj" "msvc" "CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj.d"
   "C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.cpp" "CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj" "msvc" "CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj.d"
-  "C:/Users/Komputer/CLionProjects/SDLGame/src/game/IceBlock.cpp" "CMakeFiles/GameProject.dir/src/game/IceBlock.cpp.obj" "msvc" "CMakeFiles/GameProject.dir/src/game/IceBlock.cpp.obj.d"
   "C:/Users/Komputer/CLionProjects/SDLGame/src/game/Player.cpp" "CMakeFiles/GameProject.dir/src/game/Player.cpp.obj" "msvc" "CMakeFiles/GameProject.dir/src/game/Player.cpp.obj.d"
   )
 

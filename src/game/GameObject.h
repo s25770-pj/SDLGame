@@ -1,30 +1,49 @@
 #ifndef GAME_OBJECT_H
 #define GAME_OBJECT_H
 
-#include "../engine/PhysicsEngine.h"
 #include <SDL.h>
+
+struct Size {
+    int positionX = 0;
+    int positionY = 0;
+    int width = 20;
+    int height = 25;
+};
 
 class GameObject {
 private:
-    float m_PositionX;
-    float m_PositionY;
-    float m_VelocityY;
-    float m_Gravity;
-    PhysicsEngine physics;
+    Size objectSize;
+    float accelerationX=0.0f;
+    float accelerationY=0.0f;
+    float speedX=0.0f;
+    float speedY=0.0f;
 
 public:
-    GameObject(float x, float y);
+    explicit GameObject(Size Size, float accelerationX, float accelerationY, float speedX, float speedY);
 
-    void setPosition(float x, float y);
-    void setPositionY(float positionY);
-    void setVelocityY(float VelocityY);
-    [[nodiscard]] float getPositionX() const;
-    [[nodiscard]] float getPositionY() const;
-    void move(float offsetX, float offsetY);
-    void update(float deltaTime);
-    virtual void draw(SDL_Renderer* renderer);
+    void setPosition(int x, int y);
+    void setAccelerationX(float speed);
+    void setAccelerationY(float speed);
+    void setSpeedX(float speed);
+    void setSpeedY(float speed);
 
-    void setGravity(float gravity);
+
+    [[nodiscard]] int getW() const { return objectSize.width; }
+    [[nodiscard]] int getH() const { return objectSize.height; }
+    [[nodiscard]] int getPositionX() const { return objectSize.positionX; }
+    [[nodiscard]] int getPositionY() const { return objectSize.positionY; }
+    [[nodiscard]] float getAccelerationX() const { return accelerationX; }
+    [[nodiscard]] float getAccelerationY() const { return accelerationY; }
+    [[nodiscard]] float getSpeedX() const { return speedX; }
+    [[nodiscard]] float getSpeedY() const { return speedY; }
+
+    [[nodiscard]] SDL_Rect getSDLRect() const { return {getPositionX(), getPositionY(), getW(), getH() };}
+
+    void move(int offsetX, int offsetY);
+
+    void draw(SDL_Renderer* renderer) const;
+
+    static bool checkCollision(SDL_Rect, SDL_Rect);
 };
 
 #endif

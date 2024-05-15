@@ -1,11 +1,9 @@
 #include "PhysicsEngine.h"
 
-void PhysicsEngine::update(float &position, float &velocity, float acceleration, float gravity, float deltaTime) {
-    // obliczanie prędkości
-    velocity += (acceleration + gravity) * deltaTime;
-    position += velocity * deltaTime;
-}
-
-void PhysicsEngine::jump(float &velocity, float jumpVelocity) {
-    velocity = -jumpVelocity;
+PhysicsEngine PhysicsEngine::update(const double dt) const {
+    PhysicsEngine updated = *this;
+    updated.p = p + v * dt + a*dt*dt/2.0;
+    updated.v = v + a * dt;
+    updated.a = a;
+    return updated;
 }

@@ -1,6 +1,5 @@
-C:/Users/Komputer/CLionProjects/SDLGame/src/game/IceBlock.h
+C:/Users/Komputer/CLionProjects/SDLGame/src/game/TireObject.h
 C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.h
-C:/Users/Komputer/CLionProjects/SDLGame/src/game/../engine/PhysicsEngine.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL_main.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL_stdinc.h

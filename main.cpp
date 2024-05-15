@@ -1,4 +1,4 @@
-#include "src/game/IceBlock.h"
+#include "src/game/TireObject.h"
 #include "src/game/Player.h"
 #include <vector>
 #include <memory>
@@ -8,12 +8,14 @@
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
-int BASE_PLAYER_WIDTH = 20;
-int COLUMN_WIDTH = 150;
-float COLUMN_SPEED = 100.0f; // predkosc opadania kolumn
-int COLUMN_SPAWN_FREQUENCY = 1500; // czestotliwosc generowania kolumn (w ms)
-float INITIAL_COLUMN_SPEED = 1.0f; // predkosc opadania poczatkowej kolumny
+const float friction = 0.008f;
 
+
+int FPS = 60;
+int frameDelay = 1000 / FPS;
+
+Uint32 frameStart;
+int frameTime;
 
 // Funkcja generująca losową liczbę z zakresu min do max
 int getRandomNumber(int min, int max) {
@@ -22,13 +24,6 @@ int getRandomNumber(int min, int max) {
     std::uniform_int_distribution<> distrib(min, max);
     return distrib(gen);
 }
-
-// Struktura reprezentująca kolumnę
-struct Column {
-    std::unique_ptr<GameObject> object;
-    float speed;
-    Column(std::unique_ptr<GameObject> obj, float spd) : object(std::move(obj)), speed(spd) {}
-};
 
 int main(int argc, char* argv[]) {
     // inicjalizacja sdl
@@ -54,18 +49,14 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::vector<Column> columns;
-    int score = 0;
-
-    // dodawanie poczatkowej kolumny
-    columns.emplace_back(std::make_unique<IceBlock>(0, WINDOW_HEIGHT-20, WINDOW_WIDTH), INITIAL_COLUMN_SPEED);
+    Player player({150, 250});
 
     // glowna petla gry
     bool isRunning = true;
-    Uint32 lastFrameTime = SDL_GetTicks();
-    Uint32 lastSpawnTime = SDL_GetTicks();
 
     while (isRunning) {
+        frameStart = SDL_GetTicks();
+
         // obsluga zdarzen
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
@@ -74,47 +65,51 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        // aktualizacja czasu do ostatniej klatki
-        Uint32 currentFrameTime = SDL_GetTicks();
-        float deltaTime = (currentFrameTime - lastFrameTime) / 1000.0f; // Zamiana na sekundy
-        lastFrameTime = currentFrameTime;
-
-        // start generowania kolumn po okreslonym czasie
-        if (currentFrameTime - lastSpawnTime > COLUMN_SPAWN_FREQUENCY) {
-            columns.emplace_back(std::make_unique<IceBlock>(getRandomNumber(20, WINDOW_WIDTH - COLUMN_WIDTH - 20), 0, COLUMN_WIDTH), COLUMN_SPEED);
-            lastSpawnTime = currentFrameTime;
-
-            score += 10;
+        if (player.getSpeedY() > 0) {
+            player.setSpeedY(std::max(player.getSpeedY() - friction, 0.0f));
+        } else if (player.getSpeedY() < 0) {
+            player.setSpeedY(std::min(player.getSpeedY() + friction, 0.0f));
         }
 
-        // aktualizacja obiektow w grze
-        for (auto& column : columns) {
-            auto& obj = column.object;
-            obj->update(deltaTime);
-
-            // opadanie kolumny
-            obj->move(0, column.speed * deltaTime);
-
-            // usuwanie kolumn poza ekranem
-            if (obj->getPositionY() > WINDOW_HEIGHT) {
-                obj.reset(); // zwolnienie pamieci
-            }
+        if (player.getSpeedX() > 0) {
+            player.setSpeedX(std::max(player.getSpeedX() - friction, 0.0f));
+        } else if (player.getSpeedX() < 0) {
+            player.setSpeedX(std::min(player.getSpeedX() + friction, 0.0f));
         }
 
-        // usuwanie kolumn o pustych wskaznikach
-        columns.erase(std::remove_if(columns.begin(), columns.end(), [](const Column& column) { return !column.object; }), columns.end());
+        player.move((int)player.getSpeedX(), (int)player.getSpeedY());
+
+        std::cout << "|accelerationX" << player.getAccelerationX() << "|accelerationY" << player.getAccelerationY() << "|speedX" << player.getSpeedX() << "|SpeedY" << player.getSpeedY() << std::endl;
+
+        const Uint8* keystate = SDL_GetKeyboardState(nullptr);
+        if (keystate[SDL_SCANCODE_LEFT]) {
+            player.accelerateLeft();
+        }
+        if (keystate[SDL_SCANCODE_RIGHT]) {
+            player.accelerateRight();
+        }
+        if (keystate[SDL_SCANCODE_UP]) {
+            player.accelerateUp();
+        }
+        if (keystate[SDL_SCANCODE_DOWN]) {
+            player.accelerateDown();
+        }
 
         // wyczyszczenie renderera
         SDL_SetRenderDrawColor(renderer, 128, 128, 128, 255);
         SDL_RenderClear(renderer);
 
-        // rysowanie obiektow
-        for (const auto& column : columns) {
-            column.object->draw(renderer);
-        }
+        // rysowanie gracza
+        player.draw(renderer);
 
         // wyswietlanie aktualnej klatki
         SDL_RenderPresent(renderer);
+
+        frameTime = SDL_GetTicks() - frameStart;
+
+        if (frameDelay > frameTime) {
+            SDL_Delay(frameDelay - frameTime);
+        }
     }
 
     // zwalnianie zasobow

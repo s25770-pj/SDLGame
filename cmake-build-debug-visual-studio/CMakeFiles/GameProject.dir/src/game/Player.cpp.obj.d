@@ -104,7 +104,6 @@ C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.3351
 C:/Program Files (x86)/Windows Kits/10/include/10.0.22621.0/ucrt/locale.h
 C:/Users/Komputer/CLionProjects/SDLGame/src/game/Player.h
 C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.h
-C:/Users/Komputer/CLionProjects/SDLGame/src/game/../engine/PhysicsEngine.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL_main.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL_stdinc.h
@@ -263,4 +262,3 @@ C:/Users/Komputer/Desktop/SDL2-2.30.1/include/begin_code.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/close_code.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/begin_code.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/close_code.h
-C:/Users/Komputer/CLionProjects/SDLGame/src/game/IceBlock.h

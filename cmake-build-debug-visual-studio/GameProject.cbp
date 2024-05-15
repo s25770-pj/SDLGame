@@ -103,16 +103,13 @@
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.h">
 			<Option target="GameProject"/>
 		</Unit>
-		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/IceBlock.cpp">
-			<Option target="GameProject"/>
-		</Unit>
-		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/IceBlock.h">
-			<Option target="GameProject"/>
-		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/Player.cpp">
 			<Option target="GameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/Player.h">
+			<Option target="GameProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/TireObject.h">
 			<Option target="GameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/CMakeLists.txt">

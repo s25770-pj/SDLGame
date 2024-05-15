@@ -190,30 +190,6 @@ src\game\GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\game\GameObject.cpp.s
 .PHONY : src\game\GameObject.cpp.s
 
-src\game\IceBlock.obj: src\game\IceBlock.cpp.obj
-.PHONY : src\game\IceBlock.obj
-
-# target to build an object file
-src\game\IceBlock.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\game\IceBlock.cpp.obj
-.PHONY : src\game\IceBlock.cpp.obj
-
-src\game\IceBlock.i: src\game\IceBlock.cpp.i
-.PHONY : src\game\IceBlock.i
-
-# target to preprocess a source file
-src\game\IceBlock.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\game\IceBlock.cpp.i
-.PHONY : src\game\IceBlock.cpp.i
-
-src\game\IceBlock.s: src\game\IceBlock.cpp.s
-.PHONY : src\game\IceBlock.s
-
-# target to generate assembly for a file
-src\game\IceBlock.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\game\IceBlock.cpp.s
-.PHONY : src\game\IceBlock.cpp.s
-
 src\game\Player.obj: src\game\Player.cpp.obj
 .PHONY : src\game\Player.obj
 
@@ -256,9 +232,6 @@ help:
 	@echo ... src/game/GameObject.obj
 	@echo ... src/game/GameObject.i
 	@echo ... src/game/GameObject.s
-	@echo ... src/game/IceBlock.obj
-	@echo ... src/game/IceBlock.i
-	@echo ... src/game/IceBlock.s
 	@echo ... src/game/Player.obj
 	@echo ... src/game/Player.i
 	@echo ... src/game/Player.s
