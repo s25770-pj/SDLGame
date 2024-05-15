@@ -21,19 +21,13 @@ private:
 public:
     explicit GameObject(Size Size, float accelerationX, float accelerationY, float speedX, float speedY);
 
-    void setPosition(int x, int y);
-    void setAccelerationX(float speed);
-    void setAccelerationY(float speed);
     void setSpeedX(float speed);
     void setSpeedY(float speed);
-
 
     [[nodiscard]] int getW() const { return objectSize.width; }
     [[nodiscard]] int getH() const { return objectSize.height; }
     [[nodiscard]] int getPositionX() const { return objectSize.positionX; }
     [[nodiscard]] int getPositionY() const { return objectSize.positionY; }
-    [[nodiscard]] float getAccelerationX() const { return accelerationX; }
-    [[nodiscard]] float getAccelerationY() const { return accelerationY; }
     [[nodiscard]] float getSpeedX() const { return speedX; }
     [[nodiscard]] float getSpeedY() const { return speedY; }
 
@@ -42,8 +36,9 @@ public:
     void move(int offsetX, int offsetY);
 
     void draw(SDL_Renderer* renderer) const;
+    void draw(SDL_Renderer* renderer, int r, int g, int b) const;
 
-    static bool checkCollision(SDL_Rect, SDL_Rect);
+    bool checkCollision(GameObject) const;
 };
 
 #endif

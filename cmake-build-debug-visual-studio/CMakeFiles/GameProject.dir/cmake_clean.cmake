@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GameProject.dir/main.cpp.obj"
   "CMakeFiles/GameProject.dir/main.cpp.obj.d"
-  "CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj"
-  "CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj.d"
   "CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj"
   "CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj.d"
   "CMakeFiles/GameProject.dir/src/game/Player.cpp.obj"

@@ -78,30 +78,10 @@ CMakeFiles\GameProject.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\GameProject.dir\main.cpp.s /c C:\Users\Komputer\CLionProjects\SDLGame\main.cpp
 <<
 
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: CMakeFiles\GameProject.dir\flags.make
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.cpp
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: CMakeFiles\GameProject.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj.d --working-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio --filter-prefix="Uwaga: w tym pliku:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj /FdCMakeFiles\GameProject.dir\ /FS -c C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.cpp
-<<
-
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.i"
-	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\cl.exe > CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.cpp
-<<
-
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameProject.dir/src/engine/PhysicsEngine.cpp.s"
-	C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.s /c C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.cpp
-<<
-
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: CMakeFiles\GameProject.dir\flags.make
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\GameObject.cpp
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: CMakeFiles\GameProject.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameProject.dir/src/game/GameObject.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj.d --working-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio --filter-prefix="Uwaga: w tym pliku:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj /FdCMakeFiles\GameProject.dir\ /FS -c C:\Users\Komputer\CLionProjects\SDLGame\src\game\GameObject.cpp
 <<
@@ -121,7 +101,7 @@ CMakeFiles\GameProject.dir\src\game\GameObject.cpp.s: cmake_force
 CMakeFiles\GameProject.dir\src\game\Player.cpp.obj: CMakeFiles\GameProject.dir\flags.make
 CMakeFiles\GameProject.dir\src\game\Player.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.cpp
 CMakeFiles\GameProject.dir\src\game\Player.cpp.obj: CMakeFiles\GameProject.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameProject.dir/src/game/Player.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameProject.dir/src/game/Player.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\GameProject.dir\src\game\Player.cpp.obj.d --working-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio --filter-prefix="Uwaga: w tym pliku:  " -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\cl.exe @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\GameProject.dir\src\game\Player.cpp.obj /FdCMakeFiles\GameProject.dir\ /FS -c C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.cpp
 <<
@@ -141,7 +121,6 @@ CMakeFiles\GameProject.dir\src\game\Player.cpp.s: cmake_force
 # Object files for target GameProject
 GameProject_OBJECTS = \
 "CMakeFiles\GameProject.dir\main.cpp.obj" \
-"CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj" \
 "CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj" \
 "CMakeFiles\GameProject.dir\src\game\Player.cpp.obj"
 
@@ -149,14 +128,13 @@ GameProject_OBJECTS = \
 GameProject_EXTERNAL_OBJECTS =
 
 GameProject.exe: CMakeFiles\GameProject.dir\main.cpp.obj
-GameProject.exe: CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj
 GameProject.exe: CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj
 GameProject.exe: CMakeFiles\GameProject.dir\src\game\Player.cpp.obj
 GameProject.exe: CMakeFiles\GameProject.dir\build.make
 GameProject.exe: C:\Users\Komputer\Desktop\SDL2-2.30.1\lib\x64\SDL2.lib
 GameProject.exe: C:\Users\Komputer\Desktop\SDL2-2.30.1\lib\x64\SDL2main.lib
 GameProject.exe: CMakeFiles\GameProject.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GameProject.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable GameProject.exe"
 	"C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\GameProject.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1439~1.335\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\GameProject.dir\objects1.rsp @<<
  /out:GameProject.exe /implib:GameProject.lib /pdb:C:\Users\Komputer\CLionProjects\SDLGame\cmake-build-debug-visual-studio\GameProject.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console  C:\Users\Komputer\Desktop\SDL2-2.30.1\lib\x64\SDL2.lib C:\Users\Komputer\Desktop\SDL2-2.30.1\lib\x64\SDL2main.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

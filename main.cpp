@@ -1,5 +1,6 @@
 #include "src/game/TireObject.h"
 #include "src/game/Player.h"
+#include "src/game/WallObject.h"
 #include <vector>
 #include <memory>
 #include <iostream>
@@ -8,8 +9,14 @@
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
-const float friction = 0.008f;
+const float FRICTION = 0.008f;
 
+const int WALLS_THICKNESS = 5;
+
+const int X_WALL_HEIGHT = WALLS_THICKNESS;
+const int X_WALL_WIDTH = WINDOW_WIDTH;
+const int Y_WALL_HEIGHT = WINDOW_HEIGHT;
+const int Y_WALL_WIDTH = WALLS_THICKNESS;
 
 int FPS = 60;
 int frameDelay = 1000 / FPS;
@@ -51,6 +58,11 @@ int main(int argc, char* argv[]) {
 
     Player player({150, 250});
 
+    WallObject wallUp({Y_WALL_WIDTH, 0, X_WALL_WIDTH, X_WALL_HEIGHT});
+    WallObject wallBottom({0, WINDOW_HEIGHT-X_WALL_HEIGHT, X_WALL_WIDTH, X_WALL_HEIGHT});
+    WallObject wallRight({WINDOW_WIDTH-Y_WALL_WIDTH, 0, Y_WALL_WIDTH, Y_WALL_HEIGHT});
+    WallObject wallLeft({0, 0, Y_WALL_WIDTH, Y_WALL_HEIGHT});
+
     // glowna petla gry
     bool isRunning = true;
 
@@ -59,27 +71,30 @@ int main(int argc, char* argv[]) {
 
         // obsluga zdarzen
         SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                isRunning = false;
-            }
-        }
-
-        if (player.getSpeedY() > 0) {
-            player.setSpeedY(std::max(player.getSpeedY() - friction, 0.0f));
-        } else if (player.getSpeedY() < 0) {
-            player.setSpeedY(std::min(player.getSpeedY() + friction, 0.0f));
-        }
-
-        if (player.getSpeedX() > 0) {
-            player.setSpeedX(std::max(player.getSpeedX() - friction, 0.0f));
-        } else if (player.getSpeedX() < 0) {
-            player.setSpeedX(std::min(player.getSpeedX() + friction, 0.0f));
+        if (SDL_PollEvent(&event) && event.type == SDL_QUIT) {
+            isRunning = false;
         }
 
         player.move((int)player.getSpeedX(), (int)player.getSpeedY());
 
-        std::cout << "|accelerationX" << player.getAccelerationX() << "|accelerationY" << player.getAccelerationY() << "|speedX" << player.getSpeedX() << "|SpeedY" << player.getSpeedY() << std::endl;
+        if (player.checkCollision(wallUp) || player.checkCollision(wallBottom) || player.checkCollision(wallRight) || player.checkCollision(wallLeft)) {
+            std::cout << "oj jest kolizja" << std::endl;
+            player.setSpeedX(player.getSpeedX());
+            player.setSpeedY(-player.getSpeedY());
+        }
+
+        if (player.getSpeedY() > 0) {
+            player.setSpeedY(std::max(player.getSpeedY() - FRICTION, 0.0f));
+        } else if (player.getSpeedY() < 0) {
+            player.setSpeedY(std::min(player.getSpeedY() + FRICTION, 0.0f));
+        }
+        if (player.getSpeedX() > 0) {
+            player.setSpeedX(std::max(player.getSpeedX() - FRICTION, 0.0f));
+        } else if (player.getSpeedX() < 0) {
+            player.setSpeedX(std::min(player.getSpeedX() + FRICTION, 0.0f));
+        }
+
+//        std::cout << "|speedX" << player.getSpeedX() << "|SpeedY" << player.getSpeedY() << std::endl;
 
         const Uint8* keystate = SDL_GetKeyboardState(nullptr);
         if (keystate[SDL_SCANCODE_LEFT]) {
@@ -101,6 +116,10 @@ int main(int argc, char* argv[]) {
 
         // rysowanie gracza
         player.draw(renderer);
+        wallUp.draw(renderer, 0, 255, 0);
+        wallBottom.draw(renderer, 0, 255, 0);
+        wallRight.draw(renderer, 0, 255, 0);
+        wallLeft.draw(renderer, 0, 255, 0);
 
         // wyswietlanie aktualnej klatki
         SDL_RenderPresent(renderer);

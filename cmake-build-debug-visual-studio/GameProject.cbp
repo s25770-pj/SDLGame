@@ -91,12 +91,6 @@
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/main.cpp">
 			<Option target="GameProject"/>
 		</Unit>
-		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/engine/PhysicsEngine.cpp">
-			<Option target="GameProject"/>
-		</Unit>
-		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/engine/PhysicsEngine.h">
-			<Option target="GameProject"/>
-		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.cpp">
 			<Option target="GameProject"/>
 		</Unit>
@@ -110,6 +104,9 @@
 			<Option target="GameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/TireObject.h">
+			<Option target="GameProject"/>
+		</Unit>
+		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/WallObject.h">
 			<Option target="GameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/CMakeLists.txt">

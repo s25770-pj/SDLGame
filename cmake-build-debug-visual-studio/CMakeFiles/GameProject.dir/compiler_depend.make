@@ -175,6 +175,7 @@ CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\i
 CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\include\begin_code.h
 CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\include\close_code.h
 CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.h
+CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\WallObject.h
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector"
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals_core.h"
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xkeycheck.h"
@@ -273,50 +274,6 @@ CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Stud
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_int128.hpp"
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\algorithm"
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xbit_ops.h"
-
-
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.cpp
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.h
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\array"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals_core.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\sal.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\concurrencysal.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vadefs.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xkeycheck.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_new_debug.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_new.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\crtdefs.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\use_ansi.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\initializer_list"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstddef"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xtr1common"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\type_traits"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstdint"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\stdint.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\climits"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstdlib"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstring"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_string.h"
-CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h"
 
 
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\GameObject.cpp
@@ -491,6 +448,98 @@ CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: C:\Users\Komputer\Deskto
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\include\close_code.h
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\include\begin_code.h
 CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\include\close_code.h
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\iostream"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals_core.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xkeycheck.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\istream"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\ostream"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\ios"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xlocnum"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\climits"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cmath"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_new_debug.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_new.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\crtdefs.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\use_ansi.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstdlib"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xtr1common"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\intrin0.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstdio"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\iterator"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\iosfwd"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstring"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_string.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cwchar"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys\stat.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys\types.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_iter_core.hpp"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\utility"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\initializer_list"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstddef"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\type_traits"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cstdint"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\streambuf"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xiosbase"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\system_error"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_system_error_abi.hpp"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cerrno"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\stdexcept"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\exception"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_exception.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\eh.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xstring"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_sanitizer_annotate_container.hpp"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xmemory"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cfloat"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\new"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xatomic.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xpolymorphic_allocator.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\tuple"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xcall_once.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xerrc.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\atomic"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xthreads.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xtimec.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\ctime"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xlocale"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\typeinfo"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_typeinfo.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xfacet"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xlocinfo"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_xlocinfo_types.hpp"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\cctype"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\clocale"
+CMakeFiles\GameProject.dir\src\game\GameObject.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h"
 
 
 CMakeFiles\GameProject.dir\src\game\Player.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.cpp
@@ -835,6 +884,8 @@ C:\Users\Komputer\Desktop\SDL2-2.30.1\include\SDL_events.h:
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\intrin0.inl.h":
 
+C:\Users\Komputer\CLionProjects\SDLGame\src\game\WallObject.h:
+
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\sdkddkver.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\zmmintrin.h":
@@ -872,8 +923,6 @@ C:\Users\Komputer\Desktop\SDL2-2.30.1\include\SDL_endian.h:
 C:\Users\Komputer\Desktop\SDL2-2.30.1\include\SDL_scancode.h:
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\tmmintrin.h":
-
-C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.cpp:
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\intrin.h":
 
@@ -986,8 +1035,6 @@ C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.h:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xkeycheck.h":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\__msvc_bit_utils.hpp":
-
-C:\Users\Komputer\CLionProjects\SDLGame\src\engine\PhysicsEngine.h:
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\climits":
 
@@ -1136,7 +1183,5 @@ C:\Users\Komputer\CLionProjects\SDLGame\src\game\GameObject.cpp:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\algorithm":
 
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xbit_ops.h":
-
-"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\array":
 
 C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.cpp:

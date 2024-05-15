@@ -142,30 +142,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\main.cpp.s
 .PHONY : main.cpp.s
 
-src\engine\PhysicsEngine.obj: src\engine\PhysicsEngine.cpp.obj
-.PHONY : src\engine\PhysicsEngine.obj
-
-# target to build an object file
-src\engine\PhysicsEngine.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.obj
-.PHONY : src\engine\PhysicsEngine.cpp.obj
-
-src\engine\PhysicsEngine.i: src\engine\PhysicsEngine.cpp.i
-.PHONY : src\engine\PhysicsEngine.i
-
-# target to preprocess a source file
-src\engine\PhysicsEngine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.i
-.PHONY : src\engine\PhysicsEngine.cpp.i
-
-src\engine\PhysicsEngine.s: src\engine\PhysicsEngine.cpp.s
-.PHONY : src\engine\PhysicsEngine.s
-
-# target to generate assembly for a file
-src\engine\PhysicsEngine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameProject.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GameProject.dir\src\engine\PhysicsEngine.cpp.s
-.PHONY : src\engine\PhysicsEngine.cpp.s
-
 src\game\GameObject.obj: src\game\GameObject.cpp.obj
 .PHONY : src\game\GameObject.obj
 
@@ -226,9 +202,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/engine/PhysicsEngine.obj
-	@echo ... src/engine/PhysicsEngine.i
-	@echo ... src/engine/PhysicsEngine.s
 	@echo ... src/game/GameObject.obj
 	@echo ... src/game/GameObject.i
 	@echo ... src/game/GameObject.s
