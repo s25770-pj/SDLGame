@@ -176,6 +176,7 @@ CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\i
 CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\Desktop\SDL2-2.30.1\include\close_code.h
 CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.h
 CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\WallObject.h
+CMakeFiles\GameProject.dir\main.cpp.obj: C:\Users\Komputer\CLionProjects\SDLGame\src\game\TruckObject.h
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vector"
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\yvals_core.h"
 CMakeFiles\GameProject.dir\main.cpp.obj: "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xkeycheck.h"
@@ -1023,6 +1024,8 @@ C:\Users\Komputer\Desktop\SDL2-2.30.1\include\SDL_misc.h:
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\vcruntime_exception.h":
 
 C:\Users\Komputer\CLionProjects\SDLGame\src\game\Player.h:
+
+C:\Users\Komputer\CLionProjects\SDLGame\src\game\TruckObject.h:
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h":
 

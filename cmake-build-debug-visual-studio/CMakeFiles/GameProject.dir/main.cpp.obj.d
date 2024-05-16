@@ -172,6 +172,7 @@ C:/Users/Komputer/Desktop/SDL2-2.30.1/include/begin_code.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/close_code.h
 C:/Users/Komputer/CLionProjects/SDLGame/src/game/Player.h
 C:/Users/Komputer/CLionProjects/SDLGame/src/game/WallObject.h
+C:/Users/Komputer/CLionProjects/SDLGame/src/game/TruckObject.h
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/include/vector
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/include/yvals_core.h
 C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/include/xkeycheck.h

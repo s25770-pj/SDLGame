@@ -33,7 +33,7 @@ public:
 
     [[nodiscard]] SDL_Rect getSDLRect() const { return {getPositionX(), getPositionY(), getW(), getH() };}
 
-    void move(int offsetX, int offsetY);
+    void move();
 
     void draw(SDL_Renderer* renderer) const;
     void draw(SDL_Renderer* renderer, int r, int g, int b) const;

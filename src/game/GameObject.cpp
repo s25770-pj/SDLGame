@@ -13,9 +13,9 @@ void GameObject::setSpeedY(float speed) {
     speedY = speed;
 }
 
-void GameObject::move(int offsetX, int offsetY) {
-    objectSize.positionX += offsetX+(int)accelerationX;
-    objectSize.positionY += offsetY+(int)accelerationY;
+void GameObject::move() {
+    objectSize.positionX += (int)speedX+(int)accelerationX;
+    objectSize.positionY += (int)speedY+(int)accelerationY;
 }
 
 void GameObject::draw(SDL_Renderer* renderer) const {

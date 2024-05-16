@@ -1,6 +1,7 @@
 #include "src/game/TireObject.h"
 #include "src/game/Player.h"
 #include "src/game/WallObject.h"
+#include "src/game/TruckObject.h"
 #include <vector>
 #include <memory>
 #include <iostream>
@@ -13,10 +14,15 @@ const float FRICTION = 0.008f;
 
 const int WALLS_THICKNESS = 5;
 
+const int TRUCK_HEIGHT = 250;
+const int TIRE_HEIGHT = 25;
+
 const int X_WALL_HEIGHT = WALLS_THICKNESS;
 const int X_WALL_WIDTH = WINDOW_WIDTH;
 const int Y_WALL_HEIGHT = WINDOW_HEIGHT;
 const int Y_WALL_WIDTH = WALLS_THICKNESS;
+
+using namespace std;
 
 int FPS = 60;
 int frameDelay = 1000 / FPS;
@@ -40,7 +46,7 @@ int main(int argc, char* argv[]) {
     }
 
     // tworzenie okna gry
-    SDL_Window* window = SDL_CreateWindow("Snow Tower", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
+    SDL_Window* window = SDL_CreateWindow("Crazy Road", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
     if (window == nullptr) {
         std::cerr << "Nie udało się stworzyć okna gry: " << SDL_GetError() << std::endl;
         SDL_Quit();
@@ -55,6 +61,9 @@ int main(int argc, char* argv[]) {
         SDL_Quit();
         return 1;
     }
+    SDL_Surface* surface = SDL_LoadBMP("static/road.bmp");
+
+    SDL_Texture* background = SDL_CreateTextureFromSurface(renderer, surface);
 
     Player player({150, 250});
 
@@ -63,11 +72,18 @@ int main(int argc, char* argv[]) {
     WallObject wallRight({WINDOW_WIDTH-Y_WALL_WIDTH, 0, Y_WALL_WIDTH, Y_WALL_HEIGHT});
     WallObject wallLeft({0, 0, Y_WALL_WIDTH, Y_WALL_HEIGHT});
 
+    std::vector<std::shared_ptr<TireObject>> tires;
+    std::vector<std::shared_ptr<TruckObject>> trucks;
+
     // glowna petla gry
     bool isRunning = true;
 
     while (isRunning) {
         frameStart = SDL_GetTicks();
+
+        if (surface == nullptr) {
+            cout << "xdkurwa" << endl;
+        }
 
         // obsluga zdarzen
         SDL_Event event;
@@ -75,7 +91,16 @@ int main(int argc, char* argv[]) {
             isRunning = false;
         }
 
-        player.move((int)player.getSpeedX(), (int)player.getSpeedY());
+        player.move();
+
+        for (auto& tire : tires) {
+            tire->move();
+        }
+
+        for (auto& truck_kun : trucks) {
+            truck_kun->move();
+        }
+
 
         if (player.checkCollision(wallUp) || player.checkCollision(wallBottom) || player.checkCollision(wallRight) || player.checkCollision(wallLeft)) {
             std::cout << "oj jest kolizja" << std::endl;
@@ -94,8 +119,6 @@ int main(int argc, char* argv[]) {
             player.setSpeedX(std::min(player.getSpeedX() + FRICTION, 0.0f));
         }
 
-//        std::cout << "|speedX" << player.getSpeedX() << "|SpeedY" << player.getSpeedY() << std::endl;
-
         const Uint8* keystate = SDL_GetKeyboardState(nullptr);
         if (keystate[SDL_SCANCODE_LEFT]) {
             player.accelerateLeft();
@@ -110,16 +133,66 @@ int main(int argc, char* argv[]) {
             player.accelerateDown();
         }
 
+        if (getRandomNumber(0, 100) < 5) {
+            int randomX = getRandomNumber(0 + WALLS_THICKNESS, WINDOW_WIDTH - WALLS_THICKNESS);
+            auto tire = std::make_shared<TireObject>(Size{randomX, 0, 20, 25});
+            int tire_speed = getRandomNumber(2, 4);
+            tire->setSpeedY((float)tire_speed);
+            tires.push_back(tire);
+        }
+
+        if (getRandomNumber(0, 1000) < 5) {
+            int randomX = getRandomNumber(0 + WALLS_THICKNESS, WINDOW_WIDTH - WALLS_THICKNESS);
+            auto truck_kun = std::make_shared<TireObject>(Size{randomX, 0, 50, 80});
+            int truck_speed = getRandomNumber(4, 6);
+            truck_kun->setSpeedY((float)truck_speed);
+            tires.push_back(truck_kun);
+        }
+
+        // usuwanie obiektow ktory wyszly poza ekran
+
+
         // wyczyszczenie renderera
         SDL_SetRenderDrawColor(renderer, 128, 128, 128, 255);
         SDL_RenderClear(renderer);
 
-        // rysowanie gracza
-        player.draw(renderer);
+        SDL_RenderCopy(renderer, background, nullptr, nullptr);
+
+        // rysowanie ścian
         wallUp.draw(renderer, 0, 255, 0);
         wallBottom.draw(renderer, 0, 255, 0);
         wallRight.draw(renderer, 0, 255, 0);
         wallLeft.draw(renderer, 0, 255, 0);
+
+        // rysowanie gracza
+        player.draw(renderer);
+
+        // rysowanie opon
+        auto iter = tires.begin();
+        while (iter != tires.end()) {
+            if ((*iter)->getPositionX() < 0 || (*iter)->getPositionX() > WINDOW_WIDTH || (*iter)->getPositionY() < 0 || (*iter)->getPositionY() > WINDOW_HEIGHT) {
+                iter = tires.erase(iter);
+            } else {
+                if (player.checkCollision(**iter)) {
+                    cout << "Kolizja! Usuwam obiekt." << endl;
+                    player.setSpeedY(4);
+                    player.setSpeedX(0);
+                    iter = tires.erase(iter);
+                    continue; // Przeskocz do następnej iteracji pętli while
+                } else {
+                    ++iter;
+                }
+            }
+        }
+
+        for (const auto& obj : tires) {
+            obj->draw(renderer);
+        }
+
+        // rysowanie ciężarówki
+        for (const auto& obj : trucks) {
+            obj->draw(renderer);
+        }
 
         // wyswietlanie aktualnej klatki
         SDL_RenderPresent(renderer);

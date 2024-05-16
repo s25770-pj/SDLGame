@@ -13,6 +13,7 @@ add_executable(GameProject main.cpp
         src/game/TireObject.h
         src/game/Player.cpp
         src/game/WallObject.h
+        src/game/TruckObject.h
 )
 
 target_link_libraries(${PROJECT_NAME} ${SDL2_LIB_DIR}/SDL2.lib ${SDL2_LIB_DIR}/SDL2main.lib)

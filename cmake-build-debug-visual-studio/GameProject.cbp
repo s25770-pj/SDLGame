@@ -106,6 +106,9 @@
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/TireObject.h">
 			<Option target="GameProject"/>
 		</Unit>
+		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/TruckObject.h">
+			<Option target="GameProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/WallObject.h">
 			<Option target="GameProject"/>
 		</Unit>
