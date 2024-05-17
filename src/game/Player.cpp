@@ -27,3 +27,7 @@ void Player::accelerateRight() {
     }
 }
 
+void Player::setHealth(int damage) {
+    health -= damage;
+}
+

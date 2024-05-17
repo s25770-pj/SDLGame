@@ -91,6 +91,9 @@
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/main.cpp">
 			<Option target="GameProject"/>
 		</Unit>
+		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/CarObject.h">
+			<Option target="GameProject"/>
+		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.cpp">
 			<Option target="GameProject"/>
 		</Unit>
@@ -101,9 +104,6 @@
 			<Option target="GameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/Player.h">
-			<Option target="GameProject"/>
-		</Unit>
-		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/TireObject.h">
 			<Option target="GameProject"/>
 		</Unit>
 		<Unit filename="C:/Users/Komputer/CLionProjects/SDLGame/src/game/TruckObject.h">

@@ -13,16 +13,18 @@ struct Size {
 class GameObject {
 private:
     Size objectSize;
-    float accelerationX=0.0f;
-    float accelerationY=0.0f;
-    float speedX=0.0f;
-    float speedY=0.0f;
+    float accelerationX;
+    float accelerationY;
+    float speedX;
+    float speedY;
+    SDL_Texture* texture;
 
 public:
     explicit GameObject(Size Size, float accelerationX, float accelerationY, float speedX, float speedY);
 
     void setSpeedX(float speed);
     void setSpeedY(float speed);
+    void setTexture(SDL_Texture* tex);
 
     [[nodiscard]] int getW() const { return objectSize.width; }
     [[nodiscard]] int getH() const { return objectSize.height; }
@@ -38,7 +40,7 @@ public:
     void draw(SDL_Renderer* renderer) const;
     void draw(SDL_Renderer* renderer, int r, int g, int b) const;
 
-    bool checkCollision(GameObject) const;
+    [[nodiscard]] bool checkCollision(const GameObject& other) const;
 };
 
 #endif

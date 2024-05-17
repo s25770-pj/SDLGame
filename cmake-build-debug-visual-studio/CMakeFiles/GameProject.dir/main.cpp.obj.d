@@ -1,4 +1,4 @@
-C:/Users/Komputer/CLionProjects/SDLGame/src/game/TireObject.h
+C:/Users/Komputer/CLionProjects/SDLGame/src/game/CarObject.h
 C:/Users/Komputer/CLionProjects/SDLGame/src/game/GameObject.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL.h
 C:/Users/Komputer/Desktop/SDL2-2.30.1/include/SDL_main.h

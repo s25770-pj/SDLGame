@@ -10,7 +10,7 @@ include_directories(${SDL2_INCLUDE_DIR})
 add_executable(GameProject main.cpp
         src/game/GameObject.h
         src/game/GameObject.cpp
-        src/game/TireObject.h
+        src/game/CarObject.h
         src/game/Player.cpp
         src/game/WallObject.h
         src/game/TruckObject.h

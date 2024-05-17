@@ -1,4 +1,4 @@
-#include "src/game/TireObject.h"
+#include "src/game/CarObject.h"
 #include "src/game/Player.h"
 #include "src/game/WallObject.h"
 #include "src/game/TruckObject.h"
@@ -10,12 +10,9 @@
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
-const float FRICTION = 0.008f;
+const float FRICTION = 0.012f;
 
 const int WALLS_THICKNESS = 5;
-
-const int TRUCK_HEIGHT = 250;
-const int TIRE_HEIGHT = 25;
 
 const int X_WALL_HEIGHT = WALLS_THICKNESS;
 const int X_WALL_WIDTH = WINDOW_WIDTH;
@@ -61,29 +58,38 @@ int main(int argc, char* argv[]) {
         SDL_Quit();
         return 1;
     }
-    SDL_Surface* surface = SDL_LoadBMP("static/road.bmp");
 
-    SDL_Texture* background = SDL_CreateTextureFromSurface(renderer, surface);
 
     Player player({150, 250});
+
+    cout << "Current health: " << player.getHealth() << endl;
 
     WallObject wallUp({Y_WALL_WIDTH, 0, X_WALL_WIDTH, X_WALL_HEIGHT});
     WallObject wallBottom({0, WINDOW_HEIGHT-X_WALL_HEIGHT, X_WALL_WIDTH, X_WALL_HEIGHT});
     WallObject wallRight({WINDOW_WIDTH-Y_WALL_WIDTH, 0, Y_WALL_WIDTH, Y_WALL_HEIGHT});
     WallObject wallLeft({0, 0, Y_WALL_WIDTH, Y_WALL_HEIGHT});
 
-    std::vector<std::shared_ptr<TireObject>> tires;
+    std::vector<std::shared_ptr<CarObject>> cars;
     std::vector<std::shared_ptr<TruckObject>> trucks;
 
     // glowna petla gry
     bool isRunning = true;
+    SDL_Surface* surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/road.bmp");
+    SDL_Surface* tire_surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/car.bmp");
+    SDL_Surface* truck_surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/truck.bmp");
+    SDL_Surface* player_surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/player.bmp");
 
+    if (surface == nullptr || tire_surface == nullptr || truck_surface == nullptr) {
+        cout << "error" << SDL_GetError() << endl;
+    }
+    SDL_Texture* background = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_Texture* tireTexture = SDL_CreateTextureFromSurface(renderer, tire_surface);
+    SDL_Texture* truckTexture = SDL_CreateTextureFromSurface(renderer, truck_surface);
+    SDL_Texture* playerTexture = SDL_CreateTextureFromSurface(renderer, player_surface);
+
+    player.setTexture(playerTexture);
     while (isRunning) {
         frameStart = SDL_GetTicks();
-
-        if (surface == nullptr) {
-            cout << "xdkurwa" << endl;
-        }
 
         // obsluga zdarzen
         SDL_Event event;
@@ -93,7 +99,7 @@ int main(int argc, char* argv[]) {
 
         player.move();
 
-        for (auto& tire : tires) {
+        for (auto& tire : cars) {
             tire->move();
         }
 
@@ -101,11 +107,14 @@ int main(int argc, char* argv[]) {
             truck_kun->move();
         }
 
-
-        if (player.checkCollision(wallUp) || player.checkCollision(wallBottom) || player.checkCollision(wallRight) || player.checkCollision(wallLeft)) {
-            std::cout << "oj jest kolizja" << std::endl;
+//do zmiany fgredoikngoinjldfgjoindfkjgondflnk;jgdfojipkngdojfip;kngjoklndfgjklnfdgojklndfgojiunbd
+        if (player.checkCollision(wallUp) || player.checkCollision(wallBottom)) {
             player.setSpeedX(player.getSpeedX());
             player.setSpeedY(-player.getSpeedY());
+
+        } else if (player.checkCollision(wallRight) || player.checkCollision(wallLeft)) {
+            player.setSpeedX(-player.getSpeedX());
+            player.setSpeedY(player.getSpeedY());
         }
 
         if (player.getSpeedY() > 0) {
@@ -135,22 +144,21 @@ int main(int argc, char* argv[]) {
 
         if (getRandomNumber(0, 100) < 5) {
             int randomX = getRandomNumber(0 + WALLS_THICKNESS, WINDOW_WIDTH - WALLS_THICKNESS);
-            auto tire = std::make_shared<TireObject>(Size{randomX, 0, 20, 25});
+            auto car = std::make_shared<CarObject>(Size{randomX, 0, 20, 25});
             int tire_speed = getRandomNumber(2, 4);
-            tire->setSpeedY((float)tire_speed);
-            tires.push_back(tire);
+            car->setSpeedY((float)tire_speed);
+            car->setTexture(tireTexture);
+            cars.push_back(car);
         }
 
         if (getRandomNumber(0, 1000) < 5) {
             int randomX = getRandomNumber(0 + WALLS_THICKNESS, WINDOW_WIDTH - WALLS_THICKNESS);
-            auto truck_kun = std::make_shared<TireObject>(Size{randomX, 0, 50, 80});
+            auto truck_kun = std::make_shared<CarObject>(Size{randomX, 0, 50, 80});
             int truck_speed = getRandomNumber(4, 6);
             truck_kun->setSpeedY((float)truck_speed);
-            tires.push_back(truck_kun);
+            truck_kun->setTexture(truckTexture);
+            cars.push_back(truck_kun);
         }
-
-        // usuwanie obiektow ktory wyszly poza ekran
-
 
         // wyczyszczenie renderera
         SDL_SetRenderDrawColor(renderer, 128, 128, 128, 255);
@@ -168,16 +176,21 @@ int main(int argc, char* argv[]) {
         player.draw(renderer);
 
         // rysowanie opon
-        auto iter = tires.begin();
-        while (iter != tires.end()) {
+        auto iter = cars.begin();
+        while (iter != cars.end()) {
             if ((*iter)->getPositionX() < 0 || (*iter)->getPositionX() > WINDOW_WIDTH || (*iter)->getPositionY() < 0 || (*iter)->getPositionY() > WINDOW_HEIGHT) {
-                iter = tires.erase(iter);
+                iter = cars.erase(iter);
             } else {
                 if (player.checkCollision(**iter)) {
-                    cout << "Kolizja! Usuwam obiekt." << endl;
                     player.setSpeedY(4);
                     player.setSpeedX(0);
-                    iter = tires.erase(iter);
+                    player.setHealth(1);
+                    cout << "You got hit by a car and lost 1 health point!" << endl;
+                    cout << "Current health: " << player.getHealth() << endl;
+                    if (player.getHealth() == 0) {
+                        isRunning = false;
+                    }
+                    iter = cars.erase(iter);
                     continue; // Przeskocz do następnej iteracji pętli while
                 } else {
                     ++iter;
@@ -185,7 +198,7 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        for (const auto& obj : tires) {
+        for (const auto& obj : cars) {
             obj->draw(renderer);
         }
 
