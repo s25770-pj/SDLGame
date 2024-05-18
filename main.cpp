@@ -129,10 +129,10 @@ int main(int argc, char* argv[]) {
         }
 
         const Uint8* keystate = SDL_GetKeyboardState(nullptr);
-        if (keystate[SDL_SCANCODE_LEFT]) {
+        if (keystate[SDLK_LEFT]) {
             player.accelerateLeft();
         }
-        if (keystate[SDL_SCANCODE_RIGHT]) {
+        if (keystate[SDLK_RIGHT]) {
             player.accelerateRight();
         }
         if (keystate[SDL_SCANCODE_UP]) {
