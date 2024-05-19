@@ -3,8 +3,8 @@ project(GameProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SDL2_INCLUDE_DIR "C:\\Users\\Komputer\\Desktop\\SDL2-2.30.1\\include")
-set(SDL2_LIB_DIR "C:\\Users\\Komputer\\Desktop\\SDL2-2.30.1\\lib\\x64")
+set(SDL2_INCLUDE_DIR "D:\\WORK\\s25770\\SDL2-2.30.1\\include")
+set(SDL2_LIB_DIR "D:\\WORK\\s25770\\SDL2-2.30.1\\lib\\x64")
 
 include_directories(${SDL2_INCLUDE_DIR})
 add_executable(GameProject main.cpp

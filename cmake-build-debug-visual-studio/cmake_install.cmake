@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Komputer/CLionProjects/SDLGame
+# Install script for directory: C:/Users/s25770/CLionProjects/untitled/SDLGame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Komputer/CLionProjects/SDLGame/cmake-build-debug-visual-studio/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/s25770/CLionProjects/untitled/SDLGame/cmake-build-debug-visual-studio/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

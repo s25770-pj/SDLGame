@@ -59,6 +59,19 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    SDL_Surface* surface = SDL_LoadBMP("C:/Users/s25770/Desktop/road.bmp");
+    SDL_Surface* tire_surface = SDL_LoadBMP("C:/Users/s25770/Desktop/car.bmp");
+    SDL_Surface* truck_surface = SDL_LoadBMP("C:/Users/s25770/Desktop/truck.bmp");
+    SDL_Surface* player_surface = SDL_LoadBMP("C:/Users/s25770/Desktop/player.bmp");
+
+    if (surface == nullptr || tire_surface == nullptr || truck_surface == nullptr) {
+        cout << "error" << SDL_GetError() << endl;
+    }
+    SDL_Texture* background = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_Texture* tireTexture = SDL_CreateTextureFromSurface(renderer, tire_surface);
+    SDL_Texture* truckTexture = SDL_CreateTextureFromSurface(renderer, truck_surface);
+    SDL_Texture* playerTexture = SDL_CreateTextureFromSurface(renderer, player_surface);
+
 
     Player player({150, 250});
 
@@ -72,20 +85,27 @@ int main(int argc, char* argv[]) {
     std::vector<std::shared_ptr<CarObject>> cars;
     std::vector<std::shared_ptr<TruckObject>> trucks;
 
+    // czekanie na rozpoczęcie gry
+    bool isWaiting = true;
+    SDL_Event event;
+    while (isWaiting) {
+        SDL_PollEvent(&event);
+        const Uint8* keystate = SDL_GetKeyboardState(nullptr);
+        if (keystate[SDL_SCANCODE_LEFT] || keystate[SDL_SCANCODE_RIGHT] || keystate[SDL_SCANCODE_UP] || keystate[SDL_SCANCODE_DOWN]) {
+            isWaiting = false;
+        }
+
+        SDL_SetRenderDrawColor(renderer, 128, 128, 128, 255);
+        SDL_RenderClear(renderer);
+
+        SDL_RenderCopy(renderer, background, nullptr, nullptr);
+        player.draw(renderer);
+
+        SDL_RenderPresent(renderer);
+    }
+
     // glowna petla gry
     bool isRunning = true;
-    SDL_Surface* surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/road.bmp");
-    SDL_Surface* tire_surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/car.bmp");
-    SDL_Surface* truck_surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/truck.bmp");
-    SDL_Surface* player_surface = SDL_LoadBMP("C:/Users/Komputer/Desktop/player.bmp");
-
-    if (surface == nullptr || tire_surface == nullptr || truck_surface == nullptr) {
-        cout << "error" << SDL_GetError() << endl;
-    }
-    SDL_Texture* background = SDL_CreateTextureFromSurface(renderer, surface);
-    SDL_Texture* tireTexture = SDL_CreateTextureFromSurface(renderer, tire_surface);
-    SDL_Texture* truckTexture = SDL_CreateTextureFromSurface(renderer, truck_surface);
-    SDL_Texture* playerTexture = SDL_CreateTextureFromSurface(renderer, player_surface);
 
     player.setTexture(playerTexture);
     while (isRunning) {
@@ -107,7 +127,6 @@ int main(int argc, char* argv[]) {
             truck_kun->move();
         }
 
-//do zmiany fgredoikngoinjldfgjoindfkjgondflnk;jgdfojipkngdojfip;kngjoklndfgjklnfdgojklndfgojiunbd
         if (player.checkCollision(wallUp) || player.checkCollision(wallBottom)) {
             player.setSpeedX(player.getSpeedX());
             player.setSpeedY(-player.getSpeedY());
@@ -129,10 +148,10 @@ int main(int argc, char* argv[]) {
         }
 
         const Uint8* keystate = SDL_GetKeyboardState(nullptr);
-        if (keystate[SDLK_LEFT]) {
+        if (keystate[SDL_SCANCODE_LEFT]) {
             player.accelerateLeft();
         }
-        if (keystate[SDLK_RIGHT]) {
+        if (keystate[SDL_SCANCODE_RIGHT]) {
             player.accelerateRight();
         }
         if (keystate[SDL_SCANCODE_UP]) {
@@ -191,7 +210,7 @@ int main(int argc, char* argv[]) {
                         isRunning = false;
                     }
                     iter = cars.erase(iter);
-                    continue; // Przeskocz do następnej iteracji pętli while
+                    continue; // nastepna iteracja while
                 } else {
                     ++iter;
                 }
